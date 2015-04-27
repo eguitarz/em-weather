@@ -37,6 +37,8 @@
 }
 
 .weatherReport-date {
+  position: relative;
+  z-index: 2;
   background-color: $grey-900;
   color: $white;
   padding: 5px;
