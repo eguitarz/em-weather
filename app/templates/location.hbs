@@ -1,8 +1,9 @@
-{{weather-datepicker setStartAt="setStartAt" setEndAt="setEndAt" query="query" }}
-
-<h1>{{model.locationName}}</h1>
-
 <section class="weatherReport">
+  <div class="weatherReport-header">
+    <h2>{{model.locationName}}</h2>
+    {{weather-searchbar placeholder="Search for a city" transitionToLocation="transitionToSearchedLocationHandler"}}
+    {{weather-datepicker setStartAt="setStartAt" setEndAt="setEndAt" query="query" }}
+  </div>
   <div class="weatherReport-sunnyPercent">{{days.sunnyPercent}}%</div>
   {{#each day in days}}
     <div class="weatherReport-day">
