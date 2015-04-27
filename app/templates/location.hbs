@@ -7,11 +7,9 @@
   <div class="weatherReport-sunnyPercent">{{days.sunnyPercent}}%</div>
   {{#each day in days}}
     <div class="weatherReport-day">
-      {{#each daily in day.daily.data}}
-        <div class="weatherReport-date">{{format-time daily.time}}</div>
-        <div class="weatherReport-temprature">{{format-degree daily.temperatureMin}}°</div>
-        <div class="weatherReport-percipitation">{{daily.precipProbability}}</div>
-      {{/each}}
+      <div class="weatherReport-date">{{format-time day.date}}</div>
+      <div class="weatherReport-temprature">{{format-degree day.temperature}}°</div>
+      <div class="weatherReport-percipitation" {{bind-attr style=day.rainfallStyle}}></div>
     </div>
   {{/each}}
 </section>

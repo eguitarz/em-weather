@@ -1,8 +1,10 @@
 export default Ember.ArrayController.extend({
+  itemController: 'dayitem',
+
   sunnyPercent: function() {
     var sunnyDays = this.filter(function(day) {
-      if (day.daily.data && day.daily.data.length > 0) {
-        var summary = day.daily.data[0].summary.toLowerCase();
+      if (day.model.daily.data && day.model.daily.data.length > 0) {
+        var summary = day.model.daily.data[0].summary.toLowerCase();
         return summary.indexOf('clear') >= 0 || summary.indexOf('cloudy') >= 0;
       } else {
         return false;
