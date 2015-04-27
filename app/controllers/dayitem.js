@@ -4,7 +4,9 @@ export default Ember.Controller.extend({
   }.property('model.daily.data'),
 
   temperature: function() {
-    return this.get('model.daily.data')[0].temperatureMin;
+    var min = this.get('model.daily.data')[0].temperatureMin;
+    var max = this.get('model.daily.data')[0].temperatureMax;
+    return Math.floor(min + max) / 2;
   }.property('model.daily.data'),
 
   rainfallPercent: function() {

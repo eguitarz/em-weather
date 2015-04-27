@@ -2380,3 +2380,28 @@
 {"level":"info","message":"Request params new_york_city-new_york","timestamp":"2015-04-27T01:43:27.839Z"}
 {"level":"info","message":"Request params new_york_city-new_york","timestamp":"2015-04-27T01:43:53.817Z"}
 {"level":"info","message":"Request params new_york_city-new_york","timestamp":"2015-04-27T01:45:44.820Z"}
+{"level":"info","message":"Request to http://autocomplete.wunderground.com/aq?query=edmonton took 295 ms ","timestamp":"2015-04-27T07:49:30.325Z"}
+{"level":"info","message":"Request params edmonton-canada","timestamp":"2015-04-27T07:49:37.541Z"}
+{"level":"info","message":"Request to http://autocomplete.wunderground.com/aq?query=edmonton, canada took 143 ms ","timestamp":"2015-04-27T07:49:37.685Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1430120977?exclude=hourly,flags took 380 ms ","timestamp":"2015-04-27T07:49:38.065Z"}
+{"level":"info","message":"Request params edmonton-canada","timestamp":"2015-04-27T07:49:56.258Z"}
+{"level":"info","message":"Request to http://autocomplete.wunderground.com/aq?query=edmonton, canada took 139 ms ","timestamp":"2015-04-27T07:49:56.398Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429466400?exclude=hourly,flags took 331 ms ","timestamp":"2015-04-27T07:49:56.730Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429552800?exclude=hourly,flags took 332 ms ","timestamp":"2015-04-27T07:49:56.731Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429639200?exclude=hourly,flags took 333 ms ","timestamp":"2015-04-27T07:49:56.732Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429725600?exclude=hourly,flags took 339 ms ","timestamp":"2015-04-27T07:49:56.738Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429898400?exclude=hourly,flags took 340 ms ","timestamp":"2015-04-27T07:49:56.739Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429984800?exclude=hourly,flags took 340 ms ","timestamp":"2015-04-27T07:49:56.740Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429812000?exclude=hourly,flags took 348 ms ","timestamp":"2015-04-27T07:49:56.747Z"}
+{"level":"info","message":"Request params edmonton-canada","timestamp":"2015-04-27T07:52:28.521Z"}
+{"level":"info","message":"Request to http://autocomplete.wunderground.com/aq?query=edmonton, canada took 190 ms ","timestamp":"2015-04-27T07:52:28.712Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1430121148?exclude=hourly,flags took 297 ms ","timestamp":"2015-04-27T07:52:29.009Z"}
+{"level":"info","message":"Request params edmonton-canada","timestamp":"2015-04-27T07:52:36.759Z"}
+{"level":"info","message":"Request to http://autocomplete.wunderground.com/aq?query=edmonton, canada took 120 ms ","timestamp":"2015-04-27T07:52:36.879Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429034400?exclude=hourly,flags took 355 ms ","timestamp":"2015-04-27T07:52:37.234Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429207200?exclude=hourly,flags took 373 ms ","timestamp":"2015-04-27T07:52:37.253Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429120800?exclude=hourly,flags took 374 ms ","timestamp":"2015-04-27T07:52:37.255Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1428948000?exclude=hourly,flags took 379 ms ","timestamp":"2015-04-27T07:52:37.258Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1428861600?exclude=hourly,flags took 384 ms ","timestamp":"2015-04-27T07:52:37.263Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429293600?exclude=hourly,flags took 402 ms ","timestamp":"2015-04-27T07:52:37.282Z"}
+{"level":"info","message":"Request to https://api.forecast.io/forecast/8b87a6a778f7b161a6ab37a8add6ab98/53.299999,-113.580002,1429380000?exclude=hourly,flags took 428 ms ","timestamp":"2015-04-27T07:52:37.308Z"}

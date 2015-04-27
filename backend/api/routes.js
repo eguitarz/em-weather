@@ -91,7 +91,7 @@ module.exports = function(app) {
   app.get('/api/weather/:location', function (req, res) {
     logger.info("Request params " + req.params.location);
 
-    if (!apiKeys.fiveHundredPX && !apiKeys.forecast || apiKeys.fixture || true)
+    if (!apiKeys.fiveHundredPX && !apiKeys.forecast || apiKeys.fixture)
       res.send(fixture);
     else
       getSearch(req.params.location)
