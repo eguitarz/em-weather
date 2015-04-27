@@ -1,0 +1,16 @@
+{{weather-datepicker setStartAt="setStartAt" setEndAt="setEndAt" query="query" }}
+
+<h1>{{model.locationName}}</h1>
+
+<section class="weatherReport">
+  <div class="weatherReport-sunnyPercent">{{days.sunnyPercent}}%</div>
+  {{#each day in days}}
+    <div class="weatherReport-day">
+      {{#each daily in day.daily.data}}
+        <div class="weatherReport-date">{{format-time daily.time}}</div>
+        <div class="weatherReport-temprature">{{format-degree daily.temperatureMin}}°</div>
+        <div class="weatherReport-percipitation">{{daily.precipProbability}}</div>
+      {{/each}}
+    </div>
+  {{/each}}
+</section>
