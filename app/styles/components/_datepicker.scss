@@ -1,0 +1,24 @@
+.datepicker {
+  display: inline-block;
+  color: $white;
+  float: right;
+}
+
+.datepicker input {
+  color: white;
+  width: 120px;
+  height: 22px;
+  padding: 4px 6px;
+  font-size: 18px;
+  line-height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  // border: 2px solid #ccc;
+  // border-radius: 8px;
+  outline: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px dashed $white;
+  text-align: center;
+}

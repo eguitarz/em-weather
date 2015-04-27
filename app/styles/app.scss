@@ -1,6 +1,18 @@
 @import 'variables';
+@import 'vendor/_typeahead';
 @import 'components/_components';
 
 #weather-wrapper {
-  padding: 40px 240px;
+  padding: 40px 210px;
+}
+
+html, body {
+  font-family: "Helvetica Neue", Helvetica, "Lucida Grande";
+  font-weight: 100;
+  background-color: $blue-900;
+  letter-spacing: 0.1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
 }

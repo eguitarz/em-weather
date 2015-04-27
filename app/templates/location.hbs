@@ -1,14 +1,17 @@
 <section class="weatherReport">
   <div class="weatherReport-header">
     <h2>{{model.locationName}}</h2>
-    {{weather-searchbar placeholder="Search for a city" transitionToLocation="transitionToSearchedLocationHandler"}}
+    {{weather-searchbar placeholder="Search for another city" transitionToLocation="transitionToSearchedLocationHandler"}}
     {{weather-datepicker setStartAt="setStartAt" setEndAt="setEndAt" query="query" }}
   </div>
-  <div class="weatherReport-sunnyPercent">{{days.sunnyPercent}}%</div>
+  <div class="weatherReport-sunnyPercent">Sunny percent:{{days.sunnyPercent}}%</div>
   {{#each day in days}}
     <div class="weatherReport-day">
       <div class="weatherReport-date">{{format-time day.date}}</div>
-      <div class="weatherReport-temprature">{{format-degree day.temperature}}°</div>
+      <div class="weatherReport-info">
+        <div class="weatherReport-icon"><i {{bind-attr class="day.icon"}}></i></div>
+        <div class="weatherReport-temprature">{{format-degree day.temperature}}°</div>
+      </div>
       <div class="weatherReport-percipitation" {{bind-attr style=day.rainfallStyle}}></div>
     </div>
   {{/each}}
