@@ -16,7 +16,8 @@
   height: 120px;
   margin: 10px 10px 0 0;
   vertical-align: top;
-  background-color: $blue-50;
+  color: $white;
+  background-color: $blue-900;
   box-shadow: 0 0 2px $shadow;
 }
 
@@ -34,14 +35,14 @@
 }
 
 .weatherReport-sunnyPercent {
-  margin: 5px 0;
+  margin: 15px 0;
   color: $white;
 }
 
 .weatherReport-date {
   position: relative;
   z-index: 2;
-  background-color: $grey-900;
+  background-color: $blue-800;
   color: $white;
   padding: 5px;
   font-size: 0.6em;
