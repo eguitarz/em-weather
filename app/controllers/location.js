@@ -1,3 +1,4 @@
+/*global Ember */
 export default Ember.Controller.extend({
   needs: ['days'],
 
@@ -8,7 +9,7 @@ export default Ember.Controller.extend({
   isSetUpDateRange: function() {
     var start = this.get('start'),
         end = this.get('end');
-    return start != null && start != '' && end != null && end != '';
+    return start !== null && start !== '' && end !== null && end !== '';
   }.property('start,end'),
 
   query: function() {

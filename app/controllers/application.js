@@ -1,3 +1,4 @@
+/*global Ember */
 export default Ember.Controller.extend({
   backgroundImage: null,
   backgroundStyle: function() {

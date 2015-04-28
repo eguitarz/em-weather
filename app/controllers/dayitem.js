@@ -1,3 +1,4 @@
+/*global Ember */
 export default Ember.Controller.extend({
   date: function() {
     return this.get('model.daily.data')[0].time;
@@ -15,7 +16,8 @@ export default Ember.Controller.extend({
   }.property('model.daily.data'),
 
   icon: function() {
-    var icon = 'wi-day-sunny'
+    var icon = 'wi-day-sunny';
+    
     switch(this.get('model.daily.data')[0].icon) {
       case 'clear-day':
         icon = 'wi-day-sunny';

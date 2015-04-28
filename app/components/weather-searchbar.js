@@ -1,3 +1,5 @@
+/*global Bloodhound*/
+/*global Ember */
 import Ember from 'ember';
 
 export default Ember.Component.extend({
