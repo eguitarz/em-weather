@@ -35,7 +35,6 @@ export default Ember.Component.extend({
       this.$('#fromDate').datepicker('setDate', new Date());
     }
 
-    console.log(end);
     if (end) {
       this.$('#toDate').datepicker('setDate', new Date(end*1000));
     } else {
