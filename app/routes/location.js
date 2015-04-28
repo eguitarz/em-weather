@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function(params) {
-    return Ember.$.getJSON('api/weather/' + params.location).then(function(data) {
+    var query = '';
+    if (params.start && params.end) {
+      query = '?start=' + params.start + '&end=' + params.end;
+    }
+    return Ember.$.getJSON('api/weather/' + params.location + query).then(function(data) {
       data.locationId = params.location;
 
       return data;

@@ -3,21 +3,20 @@ export default Ember.Controller.extend({
 
   days: Ember.computed.alias('controllers.days'),
 
-  startAt: null,
-
-  endAt: null,
+  queryParams: ['start', 'end'],
 
   isSetUpDateRange: function() {
-    return this.get('startAt') != null && this.get('endAt') != null;
-  }.property('startAt,endAt'),
+    var start = this.get('start'),
+        end = this.get('end');
+    return start != null && start != '' && end != null && end != '';
+  }.property('start,end'),
 
   query: function() {
     var self = this;
 
     if (this.get('isSetUpDateRange') === true) {
-      console.log('Ready to query, startAt: ' + this.get('startAt') + ' endAt: ' + this.get('endAt'));
 
-      Ember.$.getJSON('api/weather/' + this.get('model.locationId') + '?start='+ this.get('startAt') + '&end=' + this.get('endAt'))
+      Ember.$.getJSON('api/weather/' + this.get('model.locationId') + '?start='+ this.get('start') + '&end=' + this.get('end'))
         .then(function(data) {
         var days = self.get('days');
         days.clear();
@@ -28,13 +27,11 @@ export default Ember.Controller.extend({
 
   actions: {
     setStartAt: function(time) {
-      console.log('set startAt: ' + time);
-      this.set('startAt', time);
+      this.set('start', time);
       this.get('isSetUpDateRange'); // Every observed property has to be 'get' at least once
     },
     setEndAt: function(time) {
-      console.log('set endAt: ' + time);
-      this.set('endAt', time);
+      this.set('end', time);
       this.get('isSetUpDateRange'); // Every observed property has to be 'get' at least once
     }
   }

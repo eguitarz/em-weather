@@ -28,8 +28,7 @@ export default Ember.Component.extend({
 
     typeahead.on("typeahead:selected", function(event, location) {
       Ember.run(function () {
-        self.sendAction("transitionToLocation", location.name);
-        console.log("sendAction transitionToLocation: " + location.name);
+        self.sendAction("transitionToLocation", location.name, self.get('start'), self.get('end'));
         self.resetValue();
         // self.resetList();
       });
@@ -37,8 +36,7 @@ export default Ember.Component.extend({
 
     typeahead.on("typeahead:autocompleted", function(event, location) {
       Ember.run(function () {
-        self.sendAction("transitionToLocation", location.name);
-        console.log("sendAction completed transitionToLocation: " + location.name);
+        self.sendAction("transitionToLocation", location.name, self.get('start'), self.get('end'));
         self.resetValue();
         // self.resetList();
       });
