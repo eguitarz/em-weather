@@ -21,6 +21,7 @@ export default Ember.Controller.extend({
         var days = self.get('days');
         days.clear();
         days.pushObjects(data.weatherHistory);
+        self.controllerFor('application').set('backgroundImage', data.background.photos[0].image_url);
       });
     }
   }.observes('isSetUpDateRange'),

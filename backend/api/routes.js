@@ -39,6 +39,7 @@ function fetchPayload(searchResults) {
 
   return RSVP.all(payload).then(function(history) {return RSVP.hash({
     weatherHistory: history,
+    background: asJSON(timedGet(build500pxUrl(nameField))),
     locationName: nameField
   })});
 

@@ -3,6 +3,14 @@
 @import 'components/_components';
 
 #weather-wrapper {
+  position: fixed;
+  min-height: 100%;
+  margin: 0;
+  width: 100%;
+  background-size: cover;
+}
+
+#weather-container {
   padding: 40px 210px;
 }
 
@@ -11,6 +19,9 @@ html, body {
   font-weight: 100;
   background-color: $blue-900;
   letter-spacing: 0.1em;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

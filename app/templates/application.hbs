@@ -1,3 +1,5 @@
-<div id="weather-wrapper">
-  {{outlet}}
+<div id="weather-wrapper" {{bindAttr style=backgroundStyle}}>
+  <div id="weather-container">
+    {{outlet}}
+  </div>
 </div>
