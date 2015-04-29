@@ -13,6 +13,9 @@
     // border: 2px solid #ccc;
     border-radius: 8px;
     outline: none;
+    background-color: rgba(0,0,0,0) !important;
+    border: 1px solid $white;
+    color: $white;
 }
 
 .tt-input {
@@ -24,6 +27,8 @@
 }
 
 .tt-dropdown-menu {
+    position: relative;
+    z-index: 999 !important;
     width: 422px;
     margin-top: 12px;
     padding: 8px 0;

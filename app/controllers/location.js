@@ -24,8 +24,7 @@ export default Ember.Controller.extend({
       Ember.$.getJSON('api/weather/' + this.get('model.locationId') + '?start='+ this.get('start') + '&end=' + this.get('end'))
         .then(function(data) {
         var days = self.get('days');
-        days.clear();
-        days.pushObjects(data.weatherHistory);
+        days.clear().pushObjects(data.weatherHistory);
         self.get('application').set('backgroundImage', data.background.photos[0].image_url);
       });
     }
