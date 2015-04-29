@@ -8,10 +8,6 @@ export default Ember.Controller.extend({
 
   queryParams: ['start', 'end'],
 
-  startTime: null,
-
-  endTime: null,
-
   isSetUpDateRange: function() {
     var start = this.get('start'),
         end = this.get('end');
