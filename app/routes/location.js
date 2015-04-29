@@ -12,11 +12,24 @@ export default Ember.Route.extend({
       return data;
     });
   },
+
   setupController: function(controller, model) {
-    controller.set('model', {locationName: model.locationName, locationId: model.locationId});
-    this.controllerFor('days').set('model', model.weatherHistory);
-    if (model.background && model.background.photos && model.background.photos.length > 0) {
-      this.controllerFor('application').set('backgroundImage', model.background.photos[0].image_url);
+    this._setModel(controller, {locationName: model.locationName, locationId: model.locationId});
+    this._setWeatherHistory(model.weatherHistory);
+    this._setBackgound(model.background);
+  },
+
+  _setModel: function(controller, content) {
+    controller.set('model', content);
+  },
+
+  _setWeatherHistory: function(content) {
+    this.controllerFor('days').set('model', content);
+  },
+
+  _setBackgound: function(content) {
+    if (content && content.photos && content.photos.length > 0) {
+      this.controllerFor('application').set('backgroundImage', content.photos[0].image_url);
     }
   }
 });

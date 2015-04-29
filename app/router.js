@@ -9,4 +9,5 @@ export default Router.map(function() {
   this.route('location', { path: '/location/:location' }, function() {
 
   });
+  this.route('default', { path: '/*path' });
 });

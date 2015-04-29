@@ -9,6 +9,10 @@ export default function startApp(attrs) {
   var attributes = Ember.merge({}, config.APP);
   attributes = Ember.merge(attributes, attrs); // use defaults, but you can override;
 
+  Router.reopen({
+    location: 'none'
+  });
+
   Ember.run(function() {
     application = Application.create(attributes);
     application.setupForTesting();
