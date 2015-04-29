@@ -9,8 +9,8 @@ export default Ember.Controller.extend({
   queryParams: ['start', 'end'],
 
   isSetUpDateRange: function() {
-    var start = this.get('start'),
-        end = this.get('end');
+    var start = this.get('startTime'),
+        end = this.get('endTime');
     return start !== null && start !== undefined && end !== null && end !== undefined;
 
     // do not observe query param, there is a bug in ember might cause quey param updates twice a time
