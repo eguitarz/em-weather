@@ -1,16 +1,24 @@
 /*global Ember */
 export default Ember.Controller.extend({
-  needs: ['days'],
+  needs: ['days', 'application'],
+
+  application: Ember.computed.alias('controllers.application'),
 
   days: Ember.computed.alias('controllers.days'),
 
   queryParams: ['start', 'end'],
 
+  startTime: null,
+
+  endTime: null,
+
   isSetUpDateRange: function() {
     var start = this.get('start'),
         end = this.get('end');
-    return start !== null && start !== '' && end !== null && end !== '';
-  }.property('start,end'),
+    return start !== null && start !== undefined && end !== null && end !== undefined;
+
+    // do not observe query param, there is a bug in ember might cause quey param updates twice a time
+  }.property('startTime', 'endTime'),
 
   query: function() {
     var self = this;
@@ -22,19 +30,19 @@ export default Ember.Controller.extend({
         var days = self.get('days');
         days.clear();
         days.pushObjects(data.weatherHistory);
-        self.controllerFor('application').set('backgroundImage', data.background.photos[0].image_url);
+        self.get('application').set('backgroundImage', data.background.photos[0].image_url);
       });
     }
   }.observes('isSetUpDateRange'),
 
   actions: {
-    setStartAt: function(time) {
+    setStartAtHandler: function(time) {
       this.set('start', time);
-      this.get('isSetUpDateRange'); // Every observed property has to be 'get' at least once
+      this.set('startTime', time);
     },
-    setEndAt: function(time) {
+    setEndAtHandler: function(time) {
       this.set('end', time);
-      this.get('isSetUpDateRange'); // Every observed property has to be 'get' at least once
+      this.set('endTime', time);
     }
   }
 });

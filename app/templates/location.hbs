@@ -2,7 +2,7 @@
   <div class="weatherReport-header">
     <h2>{{model.locationName}}</h2>
     {{weather-searchbar placeholder="Search for another city" transitionToLocation="transitionToSearchedLocationHandler" start=start end=end}}
-    {{weather-datepicker setStartAt="setStartAt" setEndAt="setEndAt" start=start end=end query="query" }}
+    {{weather-datepicker setStartAt="setStartAtHandler" setEndAt="setEndAtHandler" start=start end=end query="query" }}
   </div>
   <div class="weatherReport-sunnyPercent">Sunny percent:{{days.sunnyPercent}}%</div>
   {{#each day in days}}

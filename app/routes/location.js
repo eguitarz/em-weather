@@ -5,7 +5,12 @@ export default Ember.Route.extend({
     var query = '';
     if (params.start && params.end) {
       query = '?start=' + params.start + '&end=' + params.end;
+    } else {
+      var now = (new Date()).getTime()/1000,
+          aWeekLater = now + 86400 * 6;
+      query = '?start=' + now + '&end=' + aWeekLater;
     }
+
     return Ember.$.getJSON('api/weather/' + params.location + query).then(function(data) {
       data.locationId = params.location;
 
@@ -17,6 +22,7 @@ export default Ember.Route.extend({
     this._setModel(controller, {locationName: model.locationName, locationId: model.locationId});
     this._setWeatherHistory(model.weatherHistory);
     this._setBackgound(model.background);
+    controller.get('isSetUpDateRange'); // Every observed property has to be 'get' at least once
   },
 
   _setModel: function(controller, content) {

@@ -12,7 +12,9 @@ export default Ember.Component.extend({
       onClose: function( selectedDate ) {
         self.$( "#toDate" ).datepicker( "option", "minDate", selectedDate );
         // use noon to pick up the start time
-        self.sendAction('setStartAt', Math.floor(self.$( "#fromDate" ).datepicker('getDate').getTime()/1000) + 43200);
+        var time = Math.floor(self.$( "#fromDate" ).datepicker('getDate').getTime()/1000) + 43200;
+        self.sendAction('setStartAt', time);
+        console.log('send action setStartAt');
       }
     });
 
@@ -22,7 +24,9 @@ export default Ember.Component.extend({
       onClose: function( selectedDate ) {
         self.$( "#fromDate" ).datepicker( "option", "maxDate", selectedDate );
         // use noon to pick up the end time
-        self.sendAction('setEndAt', Math.floor(self.$('#toDate').datepicker('getDate').getTime()/1000) + 43200);
+        var time = Math.floor(self.$('#toDate').datepicker('getDate').getTime()/1000) + 43200;
+        self.sendAction('setEndAt', time);
+        console.log('send action setEndAt');
       }
     });
 
@@ -31,15 +35,10 @@ export default Ember.Component.extend({
 
     if (start) {
       this.$('#fromDate').datepicker('setDate', new Date(start*1000));
-    } else {
-      this.$('#fromDate').datepicker('setDate', new Date());
     }
 
     if (end) {
       this.$('#toDate').datepicker('setDate', new Date(end*1000));
-    } else {
-      var oneWeekLater = new Date((new Date()).getTime() + 864000 * 7);
-      this.$('#toDate').datepicker('setDate', oneWeekLater);
     }
   }.on('didInsertElement'),
 
