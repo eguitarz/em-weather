@@ -8,9 +8,9 @@ var express = require('express')
 server.set('serverBase', serverBase)
 
 require('./api/routes')(server)
-// server.use(static({ directory: serverBase }));
-// server.use(static({ file: path.join(serverBase, 'index.html') }));
-// server.use(static({ file: path.join(serverBase, 'index.html'), ignoredFileExtensions: /\.\w{1,5}$/ }));
+server.use(static({ directory: serverBase }));
+server.use(static({ file: path.join(serverBase, 'index.html') }));
+server.use(static({ file: path.join(serverBase, 'index.html'), ignoredFileExtensions: /\.\w{1,5}$/ }));
 
 server.listen(port, function() {
   console.log("Connect server listenting on port " + port)
