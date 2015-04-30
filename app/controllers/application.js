@@ -4,8 +4,6 @@ export default Ember.Controller.extend({
   backgroundStyle: function() {
     if (this.get('backgroundImage')) {
       return ('background-image:url(' + this.get('backgroundImage') + ')').htmlSafe();
-    } else {
-      return '';
     }
   }.property('backgroundImage')
 });

@@ -15,6 +15,7 @@
     "typeahead.js": "~0.10.5"
   },
   "devDependencies": {
-    "typeahead.js": "~0.10.5"
+    "typeahead.js": "~0.10.5",
+    "jquery-mockjax": "~1.6.2"
   }
 }

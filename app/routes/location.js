@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     if (params.start && params.end) {
       query = '?start=' + params.start + '&end=' + params.end;
     } else {
-      var now = (new Date()).getTime()/1000,
+      var now = Math.floor((new Date()).getTime()/1000),
           aWeekLater = now + 86400 * 6;
       query = '?start=' + now + '&end=' + aWeekLater;
     }

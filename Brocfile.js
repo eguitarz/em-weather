@@ -9,6 +9,7 @@ var app = new EmberApp();
 app.import("bower_components/typeahead.js/dist/typeahead.jquery.min.js");
 app.import("bower_components/typeahead.js/dist/bloodhound.min.js");
 app.import("bower_components/jquery-ui/jquery-ui.min.js");
+app.import("bower_components/jquery-mockjax/jquery.mockjax.js");
 
 app.import("bower_components/jquery-ui/themes/redmond/jquery-ui.css");
 app.import("bower_components/weather-icons/css/weather-icons.css");
