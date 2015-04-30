@@ -4,7 +4,7 @@ import {
 } from 'ember-qunit';
 
 moduleFor('controller:location', {
-  needs: ['controller:days']
+  needs: ['controller:days', 'controller:application']
 });
 
 // Replace this with your real tests.
@@ -22,10 +22,10 @@ test('it set start and end time', function(assert) {
   assert.equal(controller.get('start'), null);
   assert.equal(controller.get('end'), null);
 
-  controller.send('setStartAt', time);
+  controller.send('setStartAtHandler', time);
   assert.equal(controller.get('start'), time);
 
-  controller.send('setEndAt', time);
+  controller.send('setEndAtHandler', time);
   assert.equal(controller.get('end'), time);
 
   assert.equal(controller.get('isSetUpDateRange'), true);
