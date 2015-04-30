@@ -41,7 +41,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Deployed on Heroku, you might have to look into these posts if you found any issues.
+[https://github.com/tonycoco/heroku-buildpack-ember-cli](https://github.com/tonycoco/heroku-buildpack-ember-cli) - heroku deploy tool
+[http://stackoverflow.com/questions/20826580/node-js-heroku-deployment-fails-to-exec-postinstall-script-to-install-bower](http://stackoverflow.com/questions/20826580/node-js-heroku-deployment-fails-to-exec-postinstall-script-to-install-bower) - bower issue, see the comments from Sergey K
+[https://github.com/heroku/heroku-buildpack-multi](https://github.com/heroku/heroku-buildpack-multi) - multi buildpack
 
 ## Further Reading / Useful Links
 
